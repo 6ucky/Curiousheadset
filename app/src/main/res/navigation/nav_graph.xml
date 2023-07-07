@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.spectre.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SigninFragment"
+            app:destination="@id/SigninFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.spectre.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_AnalyseFragment"
+            app:destination="@id/AnalyseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AnalyseFragment"
+        android:name="com.example.spectre.FullscreenFragment"
+        android:label="Analysis"
+        tools:layout="@layout/fragment_fullscreen">
+    </fragment>
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.spectre.ui.login.LoginFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_LoginFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SigninFragment"
+        android:name="com.example.spectre.ui.login.SigninFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_SigninFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+</navigation>
